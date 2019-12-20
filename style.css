@@ -1,0 +1,642 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-size: inherit;
+    line-height: 1.5;
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+:root {
+    --main-blue: #e1ce24;
+}
+html {
+    font-size: 100%;
+    font-size: 18px;
+    scroll-behavior: smooth
+}
+.container {
+    padding-left: 12px;
+    padding-right: 12px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Styles for nav */
+.nav {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-shadow: 0 0px 10px rgba(0,0,0,.10);
+}
+.nav .nav_btn {
+    font-size: 1em;
+    background: transparent;
+    border: 1px solid var(--main-blue);
+    padding: .1em .6em;
+    color: var(--main-blue);
+}
+.nav a {
+    color: #4D4D4D;
+}
+.nav a:hover,
+.nav a:active {
+    color: var(--main-blue)
+}
+.nav a.active {
+    color: var(--main-blue);
+}
+.menu_list a{
+    text-align: center;
+    display: inline-block;
+}
+.menu_list_desktop li{
+    margin-right: 12px;
+}
+.menu_list_desktop a {
+    font-size: 16px;
+}
+.menu_list li {
+    margin: 10px auto;
+    width: fit-content
+}
+.menu_list {
+    margin-top: 30px;
+}
+.logo {
+    height: 60px;
+}
+/* Nav styles end here */
+
+/* Styles for header */
+.top_header {
+    background: #000;
+    color: #fff;
+}
+.header {
+    height: 400px;
+    position: relative
+}
+.header h1 {
+    font-size: 3.5em;
+}
+.header h1 small {
+    margin-top: 12px;
+}
+.header_content{
+    position: absolute;
+    bottom: 20%;
+}
+
+/* Flex styles */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.flex.column {
+    flex-direction: column;
+}
+.flex.wrap {
+    flex-wrap: wrap;
+}
+.flex.flex_start {
+    align-items: flex-start
+}
+.flex.desktop {
+    display: block;
+}
+
+/* Typography */
+h1, h2 {
+    font-size: 2.5em;
+    line-height: 1;
+}
+a {
+    color: var(--main-blue);
+    text-decoration: none;
+    position: relative;
+}
+p a {
+    font-size: inherit
+}
+a:not(.no_underline):before{
+    content: '';
+    display: inline-block;
+    width: 0;
+    background: currentColor;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: width .15s ease-out;
+}
+a:hover:before,
+a:hover:after {
+    width: 90%;
+    transform-origin: left left;
+}
+a.btn:hover:before,
+a.btn:hover:active,
+a.no_underline:hover:before,
+a.no_underline:active:before,
+.partner a:hover:before {
+    visibility: hidden;
+    width: 0;
+}
+
+footer a {
+    transition: color .25s;
+}
+.footer p {
+    max-width: none
+}
+.subscribe {
+    max-width:300px;
+}
+footer [type="submit"] {
+    background: #005BB0;
+    transition: background .25s;
+}
+footer [type="submit"]:hover,
+footer [type="submit"]:active{
+    background: rgb(0, 119, 231);
+}
+footer a:hover, 
+footer a:active  {
+    color: #fff;
+}
+.accent {
+    font-size: inherit;
+    color: var(--main-blue)
+}
+h2 {
+    color: var(--main-blue);
+    margin-bottom: 18px;
+}
+h1 small {
+    font-weight: normal;
+    font-size: 1rem;
+    display: block;
+}
+a {
+    text-decoration: none
+}
+.normal {
+    font-weight: normal;
+}
+.bold {
+    font-size: inherit;
+    font-weight: bold
+}
+.img-resp {
+    width:100%;
+}
+.text-center {
+    text-align: center
+}
+.small {
+    font-size: .8em;
+    color: #555;
+}
+/* Sections */
+.how_article  p:first-child {
+    font-weight: bold;
+}
+.how_article {
+    margin-bottom: 60px;
+}
+.light-blue {
+    background: #F5F7FA;
+}
+.actions {
+    max-width: 230px;
+}
+.other_projects p {
+    color: #474747;
+    position: relative;
+}
+.other_projects p:before {
+    position: absolute;
+    top: -15px;
+    content: '';
+    height: 2px;
+    background: #E6001C;
+    width: 30px;
+    display: block
+}
+.how, 
+.not-country,
+.africa-commons,
+.projects,
+.partners_sponsors,
+.people,
+.contribute,
+.footer {
+    padding: 60px 0 20px;
+}
+.how {
+    position: relative;
+    z-index: 1;
+}
+.how .blob {
+    height: 200px;
+    width:200px;
+    background: linear-gradient(#fff, #f7f7f7);
+    display: block;
+    position: absolute;
+    top:30%;
+    transform: translateY(-30%);
+    right: 0;
+    border-radius: 100%;
+    z-index: -5;
+}
+.africa-commons .flex > div {
+    flex-basis: 49%;
+}
+.contribute {
+    padding-bottom: 60px;
+}
+.description {
+    padding: 30px 0;
+}
+.description a {
+    display: inline-block;
+    color: var(--main-blue);
+    margin-top: 12px
+}
+.africa-commons img {
+    box-shadow: 0 0 8px rgba(0,0,0,.10);
+    margin-top: 20px;
+}
+.how .flex {
+    align-items: flex-start;
+    flex-wrap: wrap
+}
+.how_article {
+    flex-basis: 100%;
+}
+.btn {
+    font-size: 1em;
+    background: #fff;
+    padding: .4em 1em;
+    border: 1px solid var(--main-blue);
+    color: var(--main-blue);
+    cursor: pointer;
+}
+.btn.main {
+    background: var(--main-blue);
+    border: 1px solid currentColor;
+    color: #fff;
+    transition: background .25s;
+}
+.btn.main:hover,
+.btn.main:active {
+    background: rgb(0, 119, 231);
+}
+.country_container {
+    width:45%;
+    display: inline-block;
+}
+.country_logo {
+    width:100%;
+    height: 55px
+}
+.not-country_countries {
+    margin-top: 30px;
+}
+
+
+/* projects */
+.project_img {
+    width: 100%;
+    margin-bottom: 14px;
+    box-shadow: 0 0px 6px rgba(0,0,0,.10);
+    transition: box-shadow .25s;
+}
+.img_container:hover .project_img {
+    box-shadow: 3px 3px 10px rgba(0,0,0,.10);
+}
+.img_container:active .project_img {
+    box-shadow: none;
+}
+.projects_outline {
+    margin-top: 60px;
+}
+.project {
+    margin-bottom: 60px;
+    flex-basis: 48%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.project a:first-child {
+    margin-right: 10px;
+}
+.project_desc {
+    margin-bottom: 6px;
+}
+
+/* people */
+.person_avatar {
+    width: 100px;
+    border-radius: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+}
+.incubated_programes {
+    margin-top: 60px;
+}
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+.person {
+    margin-bottom: 40px;
+}
+.people .person:last-child {
+    margin-bottom: 0;
+}
+.btn-group {
+    margin-top: 12px;
+}
+
+/* Partners */
+.partner_img {
+    width: 100%;
+}
+.partners.flex,
+.sponsors.flex {
+    flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: space-evenly
+}
+.partner {
+    max-width: 110px;
+    margin: 10px;
+}
+
+/* Footer */
+.footer {
+    background:#000;
+    color: #fff;
+}
+.footer p,
+.footer a {
+    font-size: .8em;
+    color: #D9D9D9;
+}
+.footer input {
+    font-size: .8em;
+}
+
+.footer_container > div {
+    margin-top: 40px;
+}
+.footer{
+    padding-top: 10px;
+}
+.footer_container > div h3 {
+    margin-bottom: 8px;
+}
+.footer input[type="email"] {
+    width:100%;
+    margin: 20px 0 12px;
+    padding: 8px 12px;
+    background: #e9e9e9;
+    border: none;
+    transition: background .25s;
+}
+.footer input[type="email"]:focus {
+    background: #fff;
+}
+.footer_container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+footer input[type="submit"].btn {
+    width:100%;
+    border:none;
+    padding: 8px 0;
+}
+.meet > div {
+    margin-bottom: 30px;
+}
+.meet > div p:first-child {
+    margin-bottom: 8px;
+}
+ul {
+    list-style: none;
+}
+
+
+/* spaces */
+.margin-top-40 {
+    margin-top: 40px;
+}
+
+.hide_person_mobile {
+    display: none
+}
+.see_everyone_container {
+    width: 100px;
+    margin: 0 auto;
+}
+.see_everyone {
+    background: #000;
+    color: #fff;
+    border:0;
+    display: inline-flex;
+    padding: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+    width:100px;
+    height:100px;
+    border-radius: 100%;
+    text-align: left;
+}
+.see_everyone p {
+    margin: auto auto;
+    width: 80px;
+}
+.hide_mobile {
+    display: none
+}
+.menu {
+    display: none;
+}
+body.menu_open .menu {
+    display: block;
+}
+.other_projects {
+    margin: 60px 0;
+}
+.other_projects p {
+    margin-bottom: 20px
+}
+[data-people] .people article,
+[data-home] .people article {
+    flex-basis: 200px;
+}
+[data-home] .people article {
+    flex-basis: 25%;
+}
+[data-404] main {
+    margin: 100px 0;
+}
+[data-404] h1 {
+    margin-bottom: 30px;
+}
+[data-404] p ,
+[data-404] h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+.people .flex {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/*Media Queries */
+
+@media all and (min-width: 650px){
+    * {
+        font-size: 18px
+    }
+    .flex.desktop {
+        display: flex;
+    }
+    .container {
+        width :90%;
+        max-width: 900px;
+    }
+    h2 {
+        max-width: 300px;
+        font-size: 3em;
+    }
+    h1 {
+        font-size: 3em;
+        max-width: 350px;
+    }
+    .description p {
+        font-size: 1.3em;
+        line-height: 1.3;
+    }
+    .description {
+        padding: 50px 0;
+    }
+    .how_article,p {
+        max-width: 600px;
+    }
+    .country_container {
+        width: 24%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .country_container img {
+        width: auto;
+        margin: 0 auto;
+    }
+    .partner {
+        width: 18%;
+        margin: 10px;
+        margin-left: 0;
+        display: inline-block
+    }
+    .sponsors.flex {
+        margin-top:0;
+    }
+    .partner {
+        max-width: 300px;
+        margin: 10px;
+    }
+    .footer_container {
+        flex-direction: row;
+    }
+    .footer_container > div{
+        flex-basis: 25%;
+    }
+    .how, 
+    .not-country,
+    .africa-commons,
+    .projects,
+    .partners_sponsors,
+    .people,
+    .contribute,
+    .footer {
+        padding: 60px 0 60px;
+    }   
+    .contribute {
+        text-align:center
+    }
+    .contribute p, 
+    .contribute h2 {
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .contribute .btn-group {
+        width: 270px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .how_article {
+        flex-basis: 49%;
+    }
+    .hide_desktop {
+        display: none
+    }
+    .hide_mobile {
+        display: block;
+    }
+    body.menu_open .menu {
+        display: none;
+    }
+    .see_everyone_container {
+        width: 100px;
+        margin:0;
+    }
+    .see_everyone_container a {
+        display: block;
+        margin: auto
+    }
+    .other_projects p:before {
+        height: 4px;
+        width: 60px;
+    }
+    .how .blob {
+        height: 400px;
+        width:400px;
+    }
+    [data-people] .people article,
+    [data-home] .people article {
+        margin-bottom: 60px;
+    }
+    .people article .bold {
+        color: #313131
+    }
+    .hide_person_desktop {
+        display: block
+    }
+    .how h2 {
+        margin-bottom: 40px;
+    }
+    .hide_person_mobile {
+        display: block
+    }
+}
+@media all and (min-width: 999px){
+    .container {
+        max-width: 1140px;
+    }
+    h2 {
+        max-width: 500px;
+        font-size: 3em;
+    }
+    .description p,
+    .other_projects p {
+        font-size: 2em;
+        max-width:85%;
+        line-height: 1.3em;
+    }
+    .footer_container > div{
+        flex-basis: 30%;
+    }
+    .meet {
+        flex-grow: .9
+    }
+}
